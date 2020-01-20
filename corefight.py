@@ -2,52 +2,102 @@ import json
 import sys
 import coredata
 
-def battle():
+def battle(teamA, teamB):
 
-    updateInitialSodierData()
+    allPlayers = teamA + teamB
+    for player in allPlayers:
+        updateInitialSodierData(player) # Update all user's status, based on fitness, Zhi Hui, Passive Algo
 
-    # for each
-    runZhiHuiAlgor()
+    for player in allPlayers:
+        runZhiHuiAlgor(player)
 
-    # for 8 rounds
-    selectNexPlayer()
-    fightOneRound() # for this player.
+    for player in allPlayers:
+        runPassiveAlgor(player)
 
+    for round in range(8):
+        for player in allPlayers:
+            updateRoundGlobalPriorityStatus(player) # Update player infor per round
 
+        remainingPlayers = allPlayers
+        while len(remainingPlayers) > 0:
+            nextPlayer = selectNexPlayer(remainingPlayers)
+            fightOneRound(nextPlayer)
+            remainingPlayers.remove(nextPlayer)
 
     return;
 
-def updateInitialSodierData(): #input list of players.
-
+def updateInitialSodierData(player): #input list of players.
     return
+
+def runZhiHuiAlgor(player): # input: one player, the algo
+    return
+
+def runPassiveAlgor(player): # input: one player, the algo
+    return
+
+def updateRoundGlobalPriorityStatus(player): # input: one player, the algo
+    return
+
+
+def selectNexPlayer(remainingPlayers, finishedPlayers): #input: list of unplayers.
+    return
+
 
 def updateSodierData(): #input player to target player status...
 
     return
 
-def runZhiHuiAlgor(): # input: one player, the algo
-    return
-
-def selectNexPlayer(): #input: list of unplayers.
-    return
-
-def fightOneRound():
+def fightOneRound(nextPlayer):
 
     # Get One user status, affect by all the numbers
     #SoldierInfo = SoldierInfo()
 
     # update the current status first
+    # and update its status list
+    # while (!preSelfRoundStatusList.isEmpty())
+    # update the user status.
 
-    # check all his own zhihui algo
+    # while (!zhihuiRoundStatusList.isEmpty())
+    #     for each algor
+    #          check the preparition, if yes, launch and move to the post phase
+    #          check the launch prob
+    #               if yes, launch and move to the post phase
+    #          check the post zhihui status.
+    #          run the execution phase. List may contain self or others.
+    #               target user selections
+    #               check pre attack status on target users
+    #               check the post attack status on target users.
+    #
 
-    # check the preparation algo
+    # while (!preSelfActiveRoundStatusList.isEmpty())
+    # {
+    #     check algor enable status.
+    #     for each algor
+    #          check the preparition, if yes, launch and move to the post phase
+    #          check the launch prob
+    #               if yes, launch and move to the post phase
+    #          check the post active status.
+    #          run the execution phase. List may contain self or others.
+    #               target user selections
+    #               check pre attack status on target users
+    #               check the post attack status on target users.
+    # }
+    #
 
-    # check all his active algo
-    # runActiveAlgo
+    # is able to attack
+    # while (!prePreAttackRoundStatusList.isEmpty())
+    # {
+    #     execute all preAttackStatusList and update the status
+    #     decide attack count.
+    #     for each attach number
+    #           target user selections
+    #           check pre attack status on target users
+    #           check the post attack status on target users.
+    #
+    # }
+    #
 
-    # normal fight
-
-    return;
+    return
 
 def runActiveAlgo(): # input: one player, the algo
 
