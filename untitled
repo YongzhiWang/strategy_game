@@ -1,0 +1,137 @@
+Basic Data schemas.
+
+
+Stategy Type
+
+Directing:
+[
+{
+	start:
+	end:
+	prob:
+	PreCondition:
+	result: [
+		Goal
+	]
+
+
+}
+
+]
+	
+}
+
+ApplyUser{
+	RandomOne
+	RaddomTwo
+	All,
+	Major
+	LowestIQ
+	LowestPower
+	HighestPower
+	HighestIQ
+}
+
+Status {
+	ShuxingStatus,
+	ChixuStatus,
+	GongengStatus,
+	KongzhiStatus,
+	TeShuStatus
+}
+
+ShuxingStatus{
+	SelfPowerHurtRate,
+	SelfIQHurtRate,
+	SelfPowerDefenseRate
+	SelfIQDefenseRate
+	SelfIQNum
+	SelfPowerNum
+	SelfDefenseNum
+	SelfSpeedNum
+	OtherPowerHurtRate,
+	OtherIQHurtRate,
+	OtherPowerDefenseRate
+	OtherIQDefenseRate
+	OtherIQNum
+	OtherPowerNum
+	OtherDefenseNum
+	OtherSpeedNum
+}
+
+ChixuStatus{
+	Fire
+	Water
+	Poizon
+	Kuitao,
+	Sand
+	Pantao
+	Rest
+}
+
+AdditiveGongnengStatus {
+	QunGong
+	Fanji
+	Daoge
+	Gongxin
+	Probability
+	SelfHurt,
+	OtherHurt
+}
+
+NoAdditiveGongnengStatus {
+	DoubleClick、
+	guibi
+	diyu
+	Fentan
+	Fendan
+	mianyi
+	DongCha
+	Xiangong
+	Bizhong
+	PoZhen
+	Jijiu
+	QiongZhui
+	Lianhuan
+	Yuanhu
+}
+
+KongzhiStatus {
+	ZhenShe
+	Jiqiong
+	Jiaoxie
+	Hunluan
+	Xuruo
+	Jinliao
+	Chaofeng
+
+}
+
+Goal {
+	Status: xxx
+	ApplyUser:
+    BuffStatus : []
+}
+
+
+Active:
+
+Passive:
+
+FollowUp:
+
+Soldier:
+
+Positioning:
+
+
+
+
+Status {
+	HunLuan,
+	XiuZheng,
+
+
+
+}
+
